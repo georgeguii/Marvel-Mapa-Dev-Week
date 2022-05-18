@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/variaveis.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/fontes.css">
+    <link rel="stylesheet" href="src/css/animacoes.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <title>Marvel Game</title>
+</head>
+
+<body>
+    <main>
+        <header class="cabecalho">
+            <h1 class="title">Character Select</h1>
+        </header>
+
+        <div class="hero-selection">
+            <div class="big-hero player-1">
+                <img src="./src/imagens/thor.png" alt="Campeão escolhido pelo jogador 1" id="hero-player-1">
+                <div class="name">
+                    <h2 id="name-player-1">Thor</h2>
+                </div>
+            </div>
+
+            <ul class="list-hero">
+                <li class="hero selected" id="thor" data-name="Thor">
+                    <span class="tag">1P</span>
+                    <img src="./src/imagens/thor.jpg" alt="Icone do thor">
+                </li>
+
+                <li class="hero" id="homem-de-ferro" data-name="Homem de Ferro">
+                    <span class="tag">1P</span>
+                    <img src="./src/imagens/homem-de-ferro.jpg" alt="Icone do Homem de Ferro">
+                </li>
+
+                <li  class="hero" id="viuva-negra" data-name="Viúva Negra">
+                    <span class="tag">1P</span>
+                    <img src="./src/imagens/viuva-negra.jpg" alt="Icone da viúva negra">
+                </li>
+
+                <li  class="hero" id="hulk" data-name="Hulk">
+                    <span class="tag">1P</span>
+                    <img src="./src/imagens/hulk.jpg" alt="Icone do Hulk">
+                </li>
+
+                <li  class="hero" id="capitao-america" data-name="Capitão América">
+                    <span class="tag">1P</span>
+                    <img src="./src/imagens/capitao-america.jpg" alt="Icone do Capitão América">
+                </li>
+
+                <li  class="hero player-2-selected" id="ultron" data-name="Ultron">
+                    <span class="tag">2P</span>
+                    <img src="./src/imagens/ultron.jpg" alt="Icone do Ultron">
+                </li>
+
+                <li  class="hero" id="doutor-doom" data-name="Doutor Destino">
+                    <span class="tag">1P</span>
+                    <img src="./src/imagens/doutor-doom.jpg" alt="Icone do Doutor Destino">
+                </li>
+
+                <li  class="hero" id="nova" data-name="Nova">
+                    <span class="tag">1P</span>
+                    <img src="./src/imagens/nova.jpg" alt="Icone do Nova">
+                </li>
+
+                <li  class="hero" id="fenix" data-name="Fênix">
+                    <span class="tag">1P</span>
+                    <img src="./src/imagens/fenix.jpg" alt="Icone da Fênix">
+                </li>
+
+            </ul>
+
+            <div class="big-hero player-2">
+                <img src="./src/imagens/ultron.png" alt="Campeão escolhido pelo jogador 2" id="hero-player-2">
+                <div class="name">
+                    <h2>Ultron</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>

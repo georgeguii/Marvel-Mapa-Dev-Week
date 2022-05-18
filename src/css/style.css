@@ -1,0 +1,156 @@
+body {
+    font-family: 'ssf4', Courier, monospace;
+    background-color: var(--cor-secundaria);
+}
+
+body::before {
+    content: '';
+    background-image: url("../imagens/1cYrMYF.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cabecalho {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho .title {
+    color: var(--cor-titulo-fraco);
+    text-transform: uppercase;
+    font-size: 52px;
+    line-height: 102px;
+    -webkit-text-stroke: 2px var(--cor-titulo-forte);
+}
+
+.hero-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-selection .big-hero {
+    text-align: center;
+    width: 30%;
+    height: 70vh;
+    position: relative;
+}
+
+.hero-selection .big-hero img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-selection .big-hero .name::before {
+    content: '';
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.hero-selection .big-hero .name h2 {
+    color: var(--cor-padrao);
+    font-family: 'command', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 27px;
+}
+
+.hero-selection .big-hero.player-1 .name::before {
+    background-color: var(--cor-azul-principal);
+}
+
+.hero-selection .big-hero.player-2 .name::before {
+    background-color: var(--cor-vermelha-principal);
+}
+
+.hero-selection .list-hero {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hero-selection .list-hero .hero {
+    border: 2px solid var(--cor-padrao);
+    background-color: var(--cor-padrao);
+    width: 30%;
+    height: 160px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.15s ease-in-out;
+}
+
+.hero-selection .list-hero .hero img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.hero-selection .list-hero .hero.selected {
+    border: 2px solid var(--cor-azul-media);
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.hero-selection .list-hero .hero:hover {
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+.hero-selection .list-hero .hero.player-2-selected {
+    border: 2px solid var(--cor-vermelha-fraca);
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.hero-selection .list-hero .hero.player-2-selected:hover {
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.hero-selection .list-hero .hero .tag {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--cor-azul-media);
+    transition: opacity .3 ease-in-out;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.hero-selection .list-hero .hero.hero.selected .tag {
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.hero-selection .list-hero .hero.hero.player-2-selected .tag {
+    display: block;
+    animation: text-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
